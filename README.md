@@ -1,2 +1,1 @@
-# countries_fetch
- displaying countries from fetch api
+https://stbugyei.github.io/countries_fetch.github.io/

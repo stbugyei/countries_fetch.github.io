@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
 *,
 *::before,
 *::after {
@@ -14,7 +16,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     color: #000;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }
@@ -71,31 +73,30 @@ select {
     border: 1px rgb(255, 255, 255);
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 40%;
+    width: 60%;
     padding: 14px;
     border-radius: 22px;
     resize: vertical;
     outline: none;
     box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
-    transition: all 15s;
+    transition: all 0.5s;
 }
 
 input::placeholder {
     font-size: 16px;
-    font-family: 'Trebuchet MS';
     text-align: center;
     background-image: url(./image/search-solid.svg);
     background-position: 95% 50%;
     background-repeat: no-repeat;
-    background-size: 3%;
+    background-size: 2%;
 }
 
 .button {
     margin: 10px;
     padding: 5px;
-    width: 89%;
+    width: 98%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 
@@ -106,9 +107,8 @@ input::placeholder {
     border: 1px solid #020005;
     display: inline-block;
     cursor: pointer;
-    font-family: Trebuchet MS;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 600;
     padding: 10px 11px;
     margin-right: 10px;
     text-decoration: none;
@@ -123,9 +123,8 @@ input::placeholder {
     border: 1px solid #020005;
     display: inline-block;
     cursor: pointer;
-    font-family: Trebuchet MS;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 600;
     padding: 10px 11px;
     margin-right: 10px;
     text-decoration: none;
@@ -140,9 +139,8 @@ input::placeholder {
     border: 1px solid #020005;
     display: inline-block;
     cursor: pointer;
-    font-family: Trebuchet MS;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 600;
     padding: 10px 11px;
     text-decoration: none;
     width: 270px;
@@ -152,19 +150,21 @@ input::placeholder {
 }
 
 .btn_btn--sort {
+    font-size: 10px;
+    width: 69px;
     border: 1px solid #020005;
     border-radius: 2px;
     display: inline-block;
     cursor: pointer;
-    font-family: Trebuchet MS;
-    font-size: 15px;
-    padding: 10px 11px;
     margin-left: 10px;
+    padding: 0px;
+    text-align: center;
     text-decoration: none;
-    width: 57px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+    outline: none;
 }
+
 
 .button_img--size {
     width: 100%;
@@ -241,10 +241,10 @@ ul.banner_item {
 }
 
 .container_first_item {
-    width: 23%;
+    width: 22%;
     font-size: 1.0rem;
     text-align: left;
-    margin: 10px;
+    margin: 15px;
     border-radius: 4px;
     display: flex;
     flex-wrap: wrap;
@@ -258,15 +258,14 @@ ul.banner_item {
 }
 
 #flagProp {
-    margin: 30px 30px 10px 30px;
+    margin: 30px 30px 10px 10px;
     display: flex;
     justify-content: center;
 }
 
 #textProp {
     width: 81%;
-    margin-left: 40px;
-    margin-bottom: 18px;
+    margin: 20px 40px 18px;
     word-wrap: break-word;
 }
 
@@ -286,7 +285,7 @@ ul.banner_item {
 /*=============================footer===========================*/
 
 .footer {
-    background: #f8f5ff;
+    /* background: #f8f5ff; */
 }
 
 .footer_bottom {
@@ -310,7 +309,7 @@ ul.banner_item {
     width: 14%;
     display: flex;
     justify-content: space-between;
-    margin: 10px;
+    /* margin: 10px; */
 }
 
 .tweeter:hover,
@@ -329,18 +328,22 @@ ul.banner_item {
 }
 
 
-/*===================== @media (min-width: 320px) and (max-width: 480px)================= */
 
-@media (min-width: 320px) and (max-width: 480px) {
+/*===================== @media all and (max-width: 1037px) ================= */
+
+@media all and (max-width: 1037px) {
+
     .bottom_icons {
         width: 45px;
         position: relative;
         margin-top: 15px;
     }
-    .icon_group {
-        position: relative;
-        width: 65%;
+
+    button, input, optgroup, select, textarea {
+        line-height: 0; 
     }
+
+  
     .container_first {
         margin-top: 0px;
         margin-right: 0px;
@@ -349,57 +352,72 @@ ul.banner_item {
         display: flex;
         justify-content: space-around;
     }
+
     .container_first_item {
-        width: 40%;
-        margin: 10px;
+        width: 72%;
+        margin: 25px; 
         padding: 12px;
-        /* display: flex; */
-        /* justify-content: space-between;n;*/
+        display: flex;
+        flex-direction: row;
     }
+
+
+    .container_first_item:hover {
+       transform: none;
+    }
+    
     #flagProp {
-        margin: 0px 0px 0px 0px;
+        width: 40%;
+        margin: 15px;
         display: flex;
         justify-content: center;
-        width: 40%;
     }
+
     #textProp {
-        width: 81%; 
-        margin-left: 18px;
-        margin-bottom: 18px;
-        /* font-size: 24px;*/
+        width: 40%; 
+        margin: 15px;
+        font-size: 24px;
     }
+
     #button_img--size {
         width: 100%;
         padding: 10px;
     }
+
     .container_first--text {
         font-size: 0.5rem;
         padding: 6px;
     }
-    .header_text {
-        font-size: 24px;
-        line-height: 2rem;
-    }
-    .header_img {
-        width: 48%;
-    }
+
     .button {
         margin: 10px;
         padding: 5px;
-        width: 97%;
+        width: 100%;
         display: flex;
-        justify-content: center;
     }
+
     .header_content {
         margin-top: 0px;
         margin-left: 0px;
     }
+
+    .header_text {
+        margin: 10px;
+        line-height: 4rem;
+    }
+
+
+    .header_img {
+        width: 48%;
+    }
+
     .btn_btn--startwith {
         text-align: center;
         font-size: 14px;
         width: 87px;
         padding: 5px 11px;
     }
+
     .btn_btn--include {
         text-align: center;
         font-size: 14px;
@@ -407,109 +425,27 @@ ul.banner_item {
         padding: 4px 8px;
         margin-top: 2px;
     }
+
     .btn_btn--sort {
         text-align: center;
         font-size: 10px;
         width: 69px;
         padding: 0px;
     }
+
     .header_img--size {
         width: 100%;
     }
-    input[type=text],
-    select {
-        margin-top: 20px;
-        margin-bottom: 0px;
-        margin-left: 0px;
-        width: 80%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        resize: vertical;
-        background: linear-gradient(to bottom, white 5%, white 100%);
-        margin-right: 0px;
-    }
+
     .search {
         width: 70%;
         padding: 10px;
         font-size: 10px;
     }
-    .header_text {
-        margin: 10px;
-    }
+
     .header {
         width: 100%;
         text-align: center;
         font-size: 10px;
-    }
-}
-
-
-/*===================== @media (min-width: 768px) and (max-width: 1024px)================= */
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .bottom_icons {
-        width: 45px;
-        position: relative;
-        margin-top: 30px;
-    }
-    .container_first_item {
-        width: 90%;
-        margin: 15px;
-        padding: 15px;
-        justify-content: space-between;
-        border-bottom: none;
-        flex-flow: row;
-    }
-    #flagProp {
-        margin: 0px 0px 0px 0px;
-        display: flex;
-        justify-content: center;
-        width: 40%;
-    }
-    #textProp {
-        width: 81%;
-        margin-left: 18px;
-        margin-bottom: 18px;
-        font-size: 24px;
-    }
-    .container_first--text {
-        font-size: 0.5rem;
-        padding: 6px;
-    }
-    .banner {
-        height: 43vh;
-        max-width: 100%;
-        padding: 0px 5px;
-    }
-    .header_content {
-        margin-left: 63px;
-    }
-    input[type=text],
-    select {
-        margin-left: 1px;
-    }
-    .header_text {
-        margin: 10px;
-        padding-top: 63px;
-    }
-    .button {
-        margin: 10px;
-        padding: 5px;
-        width: 97%;
-        display: flex;
-        justify-content: center;
-    }
-    .header_img--size {
-        width: 127%;
-    }
-    .button_img--size {
-        width: 100%;
-        padding: -5px;
-    }
-    .icon_group {
-        position: relative;
-        width: 40%;
-        display: flex;
     }
 }

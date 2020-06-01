@@ -87,9 +87,8 @@ fetch(url)
         // =========Printing the Number of countries ================
 
         const counlent = document.querySelector('.counlent')
-        counlent.style.fontFamily = 'Trebuchet MS'
         counlent.textContent = `There are ${countries.length} Countries at present!`
-        counlent.style.fontSize = '1.5rem'
+        counlent.style.fontSize = '2rem'
     }).
 catch(function(err) {
     console.log('Loading...')
